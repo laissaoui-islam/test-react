@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams , useNavigate } from "react-router-dom";
+import { useParams , useNavigate, Link } from "react-router-dom";
 const Updatepost = () => {
   const {id} =useParams();
   const {y} =useParams();
@@ -103,7 +103,7 @@ const Updatepost = () => {
         <button type="submit" class="btn btn-primary">Submit</button>
         <div id="info"></div>
       </form>
-      <p class="text-center mt-3 text-secondary">if you have account , plase <a href="/login" >Login Now </a>
+      <p class="text-center mt-3 text-secondary">if you have account , plase <Link href="/login" >Login Now </Link>
       </p>
       </div>
     

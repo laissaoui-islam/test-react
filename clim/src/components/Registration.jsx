@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css"
 import axios from "axios"
 import useAuth from "./box/useAuth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Registration = () => {
     const  {setUserOne} = useAuth();
@@ -153,7 +153,7 @@ const Registration = () => {
         <button type="submit" class="btn btn-primary">Submit</button>
         <div id="info"></div>
       </form>
-      <p class="text-center mt-3 text-secondary">if you have account , plase <a href="/login" >Login Now </a>
+      <p class="text-center mt-3 text-secondary">if you have account , plase <Link href="/login" >Login Now </Link>
       </p>
       </div>
 

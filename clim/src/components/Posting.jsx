@@ -142,7 +142,7 @@ return(
     <button type="submit" class="btn btn-primary">Submit</button>
     <div id="info"></div>
   </form>
-  <p class="text-center mt-3 text-secondary">if you have account , plase <a href="/login" >Login Now </a>
+  <p class="text-center mt-3 text-secondary">if you have account , plase <Link href="/login" >Login Now </Link>
   </p>
   </div>
 

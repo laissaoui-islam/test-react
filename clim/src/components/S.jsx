@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 const S = () => {
     const[value,  setValue]= useState()
     const[data, setData] = useState([])
@@ -15,7 +16,7 @@ const S = () => {
             <div className="search">
                 <div>
                     <input type="search"  onChange={onchange} value={value}/>
-                    <button><a href={`/reselt/${value}`}>search</a></button>
+                    <button><Link href={`/reselt/${value}`}>search</Link></button>
                 </div>
                 <div className="dropdown-content">
                     {

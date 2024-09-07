@@ -78,7 +78,7 @@ const Home = () => {
 <div  style={{height:"200px" , color:"red" , background:"#000" , display:"-webkit-flex" , padding:"30px"}}>
 <Link to="prisont/desine"><div  style={{height:"20px" ,  color:"#fff" , background:"red" , margin:"30px" , padding:"30px"}}>ديزاين</div></Link>
 <Link to="prisont/montage"><div  style={{height:"20px" ,  color:"#fff" , background:"red", margin:"30px" , padding:"30px"}}>منتاج</div></Link>
-<Link tp="prisont/development"><div  style={{height:"20px" , color:"#fff" , background:"red", margin:"30px" , padding:"30px"}}>تطوير</div></Link>
+<Link to="prisont/development"><div  style={{height:"20px" , color:"#fff" , background:"red", margin:"30px" , padding:"30px"}}>تطوير</div></Link>
 </div>
 
 

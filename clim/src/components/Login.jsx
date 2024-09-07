@@ -98,7 +98,7 @@ const Login = () => {
         </div>
         <button type="submit" class="btn btn-primary">login</button>
       </form>
-      <p class="text-center mt-3 text-secondary">if you don't have account , plase <a href="/registration" >Registration Now </a>
+      <p class="text-center mt-3 text-secondary">if you don't have account , plase <Link href="/registration" >Registration Now </Link>
       </p>
       </div>
     )
