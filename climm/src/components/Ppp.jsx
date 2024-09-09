@@ -12,7 +12,7 @@ const Ppp = () => {
     const [records , setRecords] = useState([])
     useEffect(()=>{
         if(id === "development" || id === "montage"|| id === "desine"){
-            axios.get('https://abl-innovativeservices.netlify.app/db.json/post'+id)
+            axios.get('../../.netlify/functions/data?section=post'+id)
         .then(res =>{
             setColumns(Object.keys(res.data[0]))
             setRecords(res.data)

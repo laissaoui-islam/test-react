@@ -1,23 +1,23 @@
 import React, { useEffect , useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css"
 import axios from "axios";
-import useAuth from "./box/useAuth";
 import {  useNavigate , useParams} from "react-router-dom";
-import { Link } from "react-router-dom";
 const Pp = () => {
   const {id} =useParams();
-  const  {setUserOne} = useAuth();
   const bb = useNavigate();
     const [columns , setColumns] = useState([])
     const [records , setRecords] = useState([])
     useEffect(()=>{
         if(id === "development" || id === "montage"|| id === "desine"){
-            axios.get('https://abl-innovativeservices.netlify.app/db.json/users'+id)
-        .then(res =>{
-            setColumns(Object.keys(res.data[0]))
-            setRecords(res.data)
-
-        })
+            try{
+                const res =  axios.get('/.netlify/functions/data?section=users'+id);
+                    setColumns(Object.keys(res.data[0]))
+                    setRecords(res.data)
+        
+            }catch (error){
+                console.error('Error jhggh', error)
+            }
+        
         }else{
             bb("/notFound");
         }
@@ -48,12 +48,12 @@ const Pp = () => {
                 </thead>
                 <tbody>
                     {
-                        records.map((d,i) => (
+                        records.map((data,i) => (
                             <tr key={i}>                                
-                                <td>{d.fname}</td>
-                                <td>{d.lname}</td>
-                                <td>{d.email}</td>
-                                <td>{d.rank}</td>
+                                <td>{data.fname}</td>
+                                <td>{data.lname}</td>
+                                <td>{data.email}</td>
+                                <td>{data.rank}</td>
                                 </tr>
                         ))
                     }

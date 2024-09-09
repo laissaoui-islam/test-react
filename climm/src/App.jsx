@@ -23,6 +23,7 @@ function App() {
   return (
     <BrowserRouter>
     <Navbar />
+  
     
        <Routes>
        <Route path='/' element={<Home />}></Route>
@@ -43,7 +44,7 @@ function App() {
        <Route path='/Updatepost/:id/:y' element={<Updatepost />}></Route>
        </Route>
        <Route path='/S' element={<S />}></Route>
-       <Route path='*' element={<Student />}></Route>
+       <Route path='/*' element={<Student />}></Route>
        </Routes>
 
        </BrowserRouter>

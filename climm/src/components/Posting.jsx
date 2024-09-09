@@ -11,13 +11,13 @@ const Posting = () => {
     const [data, setdata] =useState([])
     const navigate = useNavigate()
     useEffect(() => {
-        axios.get('http://localhost:3000/users'+id)
+        axios.get('../../.netlify/functions/data?section=users'+id)
         .then(res => {
           let n = 0;
           res.data.map(user =>{
               if( user.id === y){
                 n++
-                axios.get('http://localhost:3000/users'+id+'/'+y)
+                axios.get('../../.netlify/functions/data?section=users'+id+'/'+y)
         .then(res => {
           setdata(res.data)
         })
@@ -75,7 +75,7 @@ const handleSubmit= (e) => {
         if(isvalid === false){
             alert("error")
         } else{
-            axios.post('http://localhost:3000/post'+id,formData)
+            axios.post('../../.netlify/functions/data?section=post'+id,formData)
         .then(result => {
                 alert('registred successfully go to the kogin new pales sr')
                 setUserOne(true);

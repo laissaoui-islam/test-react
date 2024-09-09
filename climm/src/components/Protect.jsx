@@ -4,6 +4,6 @@ import useAuth from "./box/useAuth";
 
 const Protect = () => {
     const  {userOne} = useAuth();
-    return (userOne) ? <Outlet/>  : <Navigate to={"/login"}/>
+    return (userOne) ? <Outlet/>  : <Navigate to={"/"}/>
 }
 export default Protect
